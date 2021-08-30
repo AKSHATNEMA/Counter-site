@@ -12,9 +12,17 @@
     />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Counter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script>
+        $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut(2000);;
+      });
+      </script>
   </head>
   <body>
-    <script type="text/javascript" href="./index.js"></script>   
+    <div class="se-pre-con"></div>   
     <header>Counter Web App</header>
       <div class="container circle">
         <div class="dot">
@@ -24,8 +32,8 @@
         </div>
       </div>
     <div class=buttons>
-        <button type="button" class="btn btn-outline-primary btn-lg" onclick="remove()">REMOVE</button>
-        <button type="button" class="btn btn-outline-primary btn-lg" onclick="add()">ADD</button>
+        <button type="button" class="btn btn-outline-info btn-lg" onclick="remove()">REMOVE</button>
+        <button type="button" class="btn btn-outline-info btn-lg" onclick="add()">ADD</button>
     </div>
     <div class=buttons>
         <button type="button" class="btn btn-info btn-lg" style="color: white;" onclick="reset()" >RESET</button>
@@ -33,7 +41,7 @@
     </div>
     <div class="entries">
         <p class="content" id="save">Saved Entries are: </p>
-        <button type="button" class="btn btn-secondary btn-lg" onclick="rem_entry()">REMOVE ENTRIES</button>
+        <button type="button" class="btn btn-info btn-lg" onclick="rem_entry()">REMOVE ENTRIES</button>
     </div>
     <script type="text/javascript" href="./index.js"></script>
     <script

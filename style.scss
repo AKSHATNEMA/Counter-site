@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 *{
     padding: 0px;
@@ -6,10 +7,20 @@
 }
 
 body{
-    background-color: rgb(245, 223, 27);
     box-sizing: border-box;
 }
 
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('./logo.png') center no-repeat rgb(82, 249, 255);
+}
 
 header{
   font-family: "Hina  Mincho", Arial, sans-serif;
@@ -18,18 +29,15 @@ header{
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  color:coral;
+  color: #0dcaf0;;
 }
 
 .circle{
     text-align: center;
 }
 
-
-
 .dot {
-    background: rgb(218,46,46);
-    background: linear-gradient(180deg, rgba(218,46,46,1) 24%, rgba(255,183,0,1) 100%);
+     background: aqua;
     background-size: cover;
     margin: auto;
     height: 16rem;
@@ -43,7 +51,7 @@ header{
         height: 10rem;
         width: 10rem;
         border-radius: 50%;
-        background-color: rgb(252, 239, 124);;
+        background-color: white;
         top: 3rem;
         left: 3rem;
         position:relative;
@@ -51,7 +59,7 @@ header{
         vertical-align: middle;
 
         .content{
-            color:GREEN;
+            color:black;
             width:6rem;
             height: 6rem;
             top: 2.5rem;
@@ -62,7 +70,6 @@ header{
             word-wrap: break-word;
         }
       }
-      
   }
 
  .buttons{
@@ -77,6 +84,10 @@ header{
      }
      button:focus{
          box-shadow:none;
+         color:white;
+     }
+     button:hover{
+         color: white;
      }
  } 
 
@@ -88,9 +99,17 @@ header{
      text-align: center;
      .content{
          font-size: 2rem;
-         color: rgb(81, 98, 255);
+         color: #0dcaf0;
+         font-family: 'Poppins';
      }
+
+      button{
+          color: white;
+      }
      button:focus{
          box-shadow:none;
+     }
+     button:hover{
+         color: white;
      }
  }
