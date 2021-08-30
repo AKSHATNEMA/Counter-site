@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(252, 239, 124);
+    background-color: rgb(245, 223, 27);
     box-sizing: border-box;
 }
 
@@ -54,7 +54,7 @@ header{
             color:GREEN;
             width:6rem;
             height: 6rem;
-            top: 2rem;
+            top: 2.5rem;
             left: 2rem; 
             position: relative;
             text-align: center;
@@ -88,7 +88,7 @@ header{
      text-align: center;
      .content{
          font-size: 2rem;
-         color: goldenrod;
+         color: rgb(81, 98, 255);
      }
      button:focus{
          box-shadow:none;

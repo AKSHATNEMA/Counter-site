@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #fcef7c;
+  background-color: #f5df1b;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -54,7 +54,7 @@ header {
   color: GREEN;
   width: 6rem;
   height: 6rem;
-  top: 2rem;
+  top: 2.5rem;
   left: 2rem;
   position: relative;
   text-align: center;
@@ -94,7 +94,7 @@ header {
 
 .entries .content {
   font-size: 2rem;
-  color: goldenrod;
+  color: #5162ff;
 }
 
 .entries button:focus {
