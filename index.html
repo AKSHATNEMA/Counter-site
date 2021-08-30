@@ -1,17 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Counter</title>
-</head>
-<body>
-    
+  </head>
+  <body>
+    <script type="text/javascript" href="./index.js"></script>   
+    <header>Counter Web App</header>
+      <div class="container circle">
+        <div class="dot">
+          <div class="dot1">
+            <div class="content" id="content">0</div>
+          </div>
+        </div>
+      </div>
+    <div class=buttons>
+        <button type="button" class="btn btn-outline-primary btn-lg" onclick="remove()">REMOVE</button>
+        <button type="button" class="btn btn-outline-primary btn-lg" onclick="add()">ADD</button>
+    </div>
+    <div class=buttons>
+        <button type="button" class="btn btn-info btn-lg" style="color: white;" onclick="reset()" >RESET</button>
+        <button type="button" class="btn btn-info btn-lg" style="color: white;" onclick="save()">SAVE</button>
+    </div>
+    <div class="entries">
+        <p class="content" id="save">Saved Entries are: </p>
+        <button type="button" class="btn btn-secondary btn-lg" onclick="rem_entry()">REMOVE ENTRIES</button>
+    </div>
+    <script type="text/javascript" href="./index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+        let count = 0;
+       const content = document.getElementById("content");
+       const Saved= document.getElementById("save");
+function add(){
+    count++;
+    content.textContent =`${count}`;
+}
 
-    <script type="text/javascript" href="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-</body>
+function remove(){
+    
+    if(count>0)
+      count--;
+    content.textContent =`${count}`;
+}
+
+function reset(){
+    count=0;
+    content.textContent =`${count}`;
+}
+
+function save(){
+    Saved.textContent +=" "+count+" ";
+}
+
+function rem_entry(){
+    Saved.textContent = "Saved Entries are: ";
+}
+    </script>
+  </body>
 </html>
