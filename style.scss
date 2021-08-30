@@ -100,11 +100,12 @@ header{
          font-family: 'Poppins';
      }
 
-      button{
+     button{
           color: white;
       }
      button:focus{
          box-shadow:none;
+         color: white;
      }
      button:hover{
          color: white;
